@@ -4,8 +4,8 @@ type: docker
 name: default
 
 steps:
-- name: install && build
-  image: drone/drone-runner-docker:1
+- name: 编译分支代码
+  image: appleboy/drone-ssh
   pull: always
   commands:
     - ls -la
@@ -13,13 +13,10 @@ steps:
     - npm run build
     - ls -la
     - pwd
-   when:
-     branch: main
-     event: push
-
-- name: commands
-  image: appleboy/drone-ssh
-      
+  when:
+    branch: main
+    event: push
+    
 trigger:
   branch:
     include:
