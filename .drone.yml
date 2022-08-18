@@ -1,10 +1,11 @@
+# kind 和 type 属性定义了一个 Kubernetes 管道
 kind: pipeline
 type: docker
 name: default
 
 steps:
 - name: install && build
-  image: zhoukingzz/blog-node-module:v3
+  image: drone/drone-runner-docker:1
   pull: always
   commands:
     - pwd
@@ -13,26 +14,17 @@ steps:
     - ls -la
     - npm run build
     - ls -la
+   when:
+     branch: main
+     event: push
 
 - name: commands
   image: appleboy/drone-ssh
-  pull: always
-  settings:
-    host:
-      from_secret: DRONE_HOST
-    username: 
-      from_secret: DRONE_NAME
-    port: 
-      from_secret: DRONE_PORT
-    password:
-      from_secret: DRONE_PSW
-    script:
-      - nginx -s reload
       
 trigger:
   branch:
     include:
-      - master
+      - main
   event:
     include:
       - push
