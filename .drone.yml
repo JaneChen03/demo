@@ -1,4 +1,4 @@
-# kind 和 type 属性定义了一个 Kubernetes 管道
+# kind 和 type 属性定义了一个 Kubernetes 管道  
 kind: pipeline
 type: docker
 name: default
