@@ -5,7 +5,7 @@ name: default
 
 steps:
 - name: 编译分支代码
-  image: juanchen03/chenjuan
+  image: juanchen03/chenjuan:myubuntu
   pull: always
   commands:
     - ls -la
