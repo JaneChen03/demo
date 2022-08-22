@@ -4,7 +4,7 @@ name: default
 
 steps:
 - name: 编译分支代码
-  image: hub.perseus.ruqimobility.com/library/h5mainprocess:1.0.8
+  image: juanchen03/chenjuan:myubuntu
   pull: always
   commands:
     - ls -la
