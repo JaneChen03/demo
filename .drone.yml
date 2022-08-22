@@ -1,0 +1,25 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: 编译分支代码
+  image: hub.perseus.ruqimobility.com/library/h5mainprocess:1.0.8
+  pull: always
+  commands:
+    - ls -la
+    - ln -sfn /drone/node_modules node_modules
+    - npm run build
+    - ls -la
+    - pwd
+  when:
+    branch: main
+    event: push
+    
+trigger:
+  branch:
+    include:
+      - main
+  event:
+    include:
+      - push
