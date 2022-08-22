@@ -4,7 +4,7 @@ name: default
 
 steps:
 - name: 编译分支代码 
-  image: juanchen03/chenjuan:myubuntu
+  image: drone/drone-runner-docker
   pull: always
   commands:
     - ls -la
