@@ -9,7 +9,7 @@ steps:
   commands:
     - ls -la
     - ln -sfn /drone/node_modules node_modules
-    - npm run build
+    - yarn build
     - ls -la
     - pwd
   when:
