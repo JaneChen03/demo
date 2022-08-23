@@ -7,11 +7,13 @@ steps:
   image: juanchen03/chenjuan:testing
   pull: always
   commands:
+    - pwd
     - ls -la
     - ln -sfn /drone/node_modules node_modules
-    - yarn build
     - ls -la
-    - pwd
+    - npm run build
+    - ls -la
+    
   when:
     branch: main
     event: push
