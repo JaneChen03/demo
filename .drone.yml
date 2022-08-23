@@ -3,7 +3,7 @@ type: docker
 name: default
 
 steps:
-- name: 编译分支代码 
+- name: 编译分支代码
   image: juanchen03/chenjuan:testing
   pull: always
   commands:
