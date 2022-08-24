@@ -9,6 +9,7 @@ steps:
   commands:
     - pwd
     - ls -la
+    - npm install
     - ln -sfn /drone/node_modules node_modules
     - ls -la
     - npm run build
