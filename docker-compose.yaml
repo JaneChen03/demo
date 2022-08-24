@@ -1,0 +1,11 @@
+version: '2.4'
+
+services:
+  app:
+    image: juanchen03/chenjuan:testing
+    working_dir: /app
+    command: >
+      /bin/sh -c "ls -la 
+      && ${NPM_SCRIPT}"
+    volumes:
+      - ./:/app/
