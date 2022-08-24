@@ -4,7 +4,7 @@ name: default
 
 steps:
 - name: 编译分支代码  
-  image: juanchen03/chenjuan:testing:v1
+  image: juanchen03/newtest:1.0
   pull: always
   commands:
     - pwd
