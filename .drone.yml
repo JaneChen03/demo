@@ -14,10 +14,18 @@ steps:
     - ls -la
     - npm run build
     - ls -la
+
+- name: devlop
+  image: juanchen03/nginx1.0
+  pull: always
+  commands:
+    - ls
+    - pwd
     
   when:
     branch: main
     event: push
+    
     
 trigger:
   branch:
