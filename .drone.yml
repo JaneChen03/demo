@@ -10,7 +10,7 @@ steps:
     - pwd
     - ls -la
     - npm install
-    - ln -sfn /drone/node_modules node_modules
+    - ln -sfn /drone/node_modules node_modules 
     - ls -la
     - npm run build
     - ls -la
