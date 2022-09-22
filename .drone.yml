@@ -21,11 +21,6 @@ steps:
   commands:
     - ls
     - pwd
-    - mkdir /mount-data
-    - mount 106.13.3.168:/usr/local/nginx/html/mount-data -o proto-tcp -o nolock
-    - rm - Rf /mount-data/*
-    - cp dist/* /mount-data
-    
   when:
     branch: main
     event: push
