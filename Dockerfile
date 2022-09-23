@@ -1,12 +1,11 @@
-FROM node:10-slim
+FROM nginx
 
-ENV SASS_BINARY_SITE=https://npm.taobao.org/mirrors/node-sass/
-ENV PHANTOMJS_CDNURL=https://npm.taobao.org/mirrors/phantomjs/
+MAINTAINER Jane
 
+COPY default.conf /usr/local/nginx/conf.d/default.conf
 
-COPY ./package.json /drone/
-COPY ./yarn.lock /drone/
-COPY ./yarn.lock /drone/
+COPY /dist /usr/local/nginx/html/
 
-RUN yarn config set registry https://registry.npm.taobao.org/
-RUN yarn install
+EXPOSE 8080
+
+CMD ["nginx", "-g", "daemon off"]
