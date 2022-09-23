@@ -16,7 +16,7 @@ steps:
     - ls -la
 
 - name: devlop
-  image: juanchen03/nginx:2.0
+  image: juanchen03/nginx:1.0
   pull: always
   commands:
     - ls
