@@ -20,14 +20,15 @@ steps:
   pull: always
   settings:
       host:
-        from_secret: 106.13.3.168 # 这里就是上面配的secret，也可以明文
-      username: root # 登录名
+        from_secret: ssh_host
+      username: 
+        from_secret: ssh_name
       password: 
-        from_secret: ABC911003abc # 登录密码
-      command_timeout: 3m
-      # 设置要将打包户的文件部署到的文件地址
-      target: /usr/share/nginx/html # 把项目拷贝到target目录
-      source: dist/* # 打包后的那个目录
+        from_secret: ssh_password
+      target: 
+         from_secret: ssh_target
+      source: 
+        - dist/*
       rm: true
       strip_components: 1
   when:
