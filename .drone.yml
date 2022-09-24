@@ -25,7 +25,7 @@ steps:
         from_secret: ssh_name
       password: 
         from_secret: ssh_password
-      target: /usr/share/nginx/html # 把项目拷贝到target目录
+      target: /usr/share/nginx/html # 把项目拷贝到target目录 
       source: dist/* # 打包后的那个目录
       rm: true
       strip_components: 1
