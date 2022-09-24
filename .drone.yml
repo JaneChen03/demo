@@ -19,6 +19,7 @@ steps:
   image: juanchen03/drone-scp
   pull: always
   settings:
+      debug: true
       host:
         from_secret: ssh_host
       username: 
