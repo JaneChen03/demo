@@ -3,7 +3,7 @@ type: docker
 name: default
 
 steps:
-- name: 编译分支代码
+- name: build
   image: juanchen03/newtest:1.0
   pull: always
   commands:
@@ -29,8 +29,8 @@ steps:
          from_secret: ssh_target
       source: 
         - dist/*
-      rm: true
-      strip_components: 1
+      script:
+      - nginx -s reload
   when:
     branch: main
     event: push
