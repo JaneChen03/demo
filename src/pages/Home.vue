@@ -2,7 +2,7 @@
   <main-layout>
     <p>Welcome home!test</p>
     <h2>test ci</h2>
-    <h2>454545</h2>
+    <h2>111</h2>
   </main-layout>
 </template>
 
