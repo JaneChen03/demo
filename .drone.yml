@@ -27,8 +27,8 @@ steps:
         from_secret: ssh_password
       target: /home/nginx/html # 把项目拷贝到target目录 
       source: dist/* # 打包后的那个目录
-      script:
-        - nginx -s reload
+      rm: true
+      strip_components: 1
   when:
     branch: main
     event: push
