@@ -1,7 +1,7 @@
 <template>
   <main-layout>
     <p>Welcome home!test</p>
-    <h6>test ci</h6>
+    <h2>test ci</h2>
   </main-layout>
 </template>
 
