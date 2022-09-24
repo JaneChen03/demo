@@ -29,6 +29,8 @@ steps:
       source: dist/* # 打包后的那个目录
       rm: true
       strip_components: 1
+      script:
+        - nginx -s reload
   when:
     branch: main
     event: push
