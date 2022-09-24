@@ -30,7 +30,7 @@ steps:
       rm: true
       strip_components: 1
       script:
-        - nginx -s reload
+        - cj-nginx -s reload
   when:
     branch: main
     event: push
