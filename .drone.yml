@@ -25,12 +25,12 @@ steps:
         from_secret: ssh_name
       password: 
         from_secret: ssh_password
-      target: 
-         from_secret: ssh_target
-      source: 
-        - dist/*
+      target: /usr/share/nginx/html # 把项目拷贝到target目录
+      source: dist/* # 打包后的那个目录
+      rm: true
+        strip_components: 1
       script:
-      - nginx -s reload
+        - nginx -s reload
   when:
     branch: main
     event: push
