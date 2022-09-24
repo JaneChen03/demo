@@ -1,6 +1,7 @@
 <template>
   <main-layout>
-    <p>Welcome home!</p>
+    <p>Welcome home!test</p>
+    <h6>test ci</h6>
   </main-layout>
 </template>
 
